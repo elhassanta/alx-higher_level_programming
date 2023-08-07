@@ -1,23 +1,21 @@
 #include "lists.h"
 
 /**
- * check_cycle - this function will check if a linked list is list
- *@head : param pointer the head
+ *check_cycle - this function will check if a linked list is list
+ *@list : param pointer the head
  *Return: this function return 1 or 0
  */
 
-int check_cycle(listint_t *head)
+int check_cycle(listint_t *list)
 {
-	listint_t *nextNode;
+	listint_t *previouse = list;
 
-	if (head == NULL)
-		return (0);
-	while (nextNode = head->next)
+	while (list)
 	{
-		if (nextNode >= head)
+		list = list->next;
+		if (list > previouse)
 			return (1);
-		head = nextNode;
+		previouse = list;
 	}
 	return (0);
-
 }
