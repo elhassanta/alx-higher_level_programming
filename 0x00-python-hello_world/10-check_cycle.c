@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * check_cycle - this function will check if a linked list is list
@@ -8,13 +8,13 @@
 
 int check_cycle(listint_t *head)
 {
-	listtint_t *nextNode;
+	listint_t *nextNode;
 
 	if (head == NULL)
 		return (0);
-	while ((nextNode = head->next) != NULL)
+	while (nextNode = head->next)
 	{
-		if (nextNode < head)
+		if (nextNode >= head)
 			return (1);
 		head = nextNode;
 	}
