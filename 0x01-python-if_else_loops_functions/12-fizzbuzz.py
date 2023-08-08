@@ -11,4 +11,3 @@ def fizzbuzz():
         else:
             str1 += "{} ".format(number)
     print(str1)
-fizzbuzz()
