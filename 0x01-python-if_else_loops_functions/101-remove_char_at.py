@@ -7,4 +7,3 @@ def remove_char_at(str, n):
             str1 += letter
         l += 1
     return str1
-
