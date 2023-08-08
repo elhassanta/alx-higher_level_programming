@@ -7,7 +7,10 @@ def fizzbuzz():
         elif (number % 3) == 0:
             str1 += "Fizz "
         elif (number % 5) == 0:
-            str1 += "Buzz "
+            if number == 100:
+                str1+= "Buzz"
+            else:
+                str1 += "Buzz "
         else:
             str1 += "{} ".format(number)
-    print(str1)
+    print(str1, end="")
