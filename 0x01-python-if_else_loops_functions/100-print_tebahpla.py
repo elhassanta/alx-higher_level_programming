@@ -7,4 +7,4 @@ while (number >= ord('a')):
     else:
         str1 += "{}".format(chr(number - ord('a') + ord('A')))
     number -= 1
-print(str1)
+print(str1, end='')
