@@ -1,0 +1,16 @@
+--2023-08-10 05:15:35--  https://github.com/alx-tools/0x02.py/raw/master/hidden_4.pyc
+Resolving github.com (github.com)... 140.82.112.4
+Connecting to github.com (github.com)|140.82.112.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/alx-tools/0x02.py/master/hidden_4.pyc [following]
+--2023-08-10 05:15:35--  https://raw.githubusercontent.com/alx-tools/0x02.py/master/hidden_4.pyc
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 531 [application/octet-stream]
+Saving to: ‘hidden_4.pyc.1’
+
+     0K                                                       100% 32.6M=0s
+
+2023-08-10 05:15:35 (32.6 MB/s) - ‘hidden_4.pyc.1’ saved [531/531]
+
