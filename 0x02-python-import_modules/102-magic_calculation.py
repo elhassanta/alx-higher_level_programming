@@ -15,4 +15,3 @@ def magic_calculation(a, b):
             c = add(c, i)
         return c
     return div(a, b)
-
