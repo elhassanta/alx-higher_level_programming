@@ -10,3 +10,4 @@ def no_c(my_string):
     for string in my_string:
         if string not in "Cc":
             str1 += string
+    return str1
