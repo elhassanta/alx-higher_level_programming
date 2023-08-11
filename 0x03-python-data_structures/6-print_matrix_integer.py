@@ -7,7 +7,7 @@ def print_matrix_integer(matrix=[[]]):
     matrix: parameter list of list of integers
     """
     for elements in matrix:
-        for element in range(0,len(elements)):
+        for element in range(0, len(elements)):
             if element != len(elements) - 1:
                 print("{}".format(elements[element]), end=" ")
             else:
