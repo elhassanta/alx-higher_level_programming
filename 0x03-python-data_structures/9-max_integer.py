@@ -3,7 +3,7 @@ def max_integer(my_list=[]):
     """My finds the biggest integer of a list.
 
     Arg:
-    
+
     my_list: parameter list of integers
 
     Return:
