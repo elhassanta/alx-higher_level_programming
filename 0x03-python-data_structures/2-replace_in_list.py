@@ -10,7 +10,6 @@ def replace_in_list(my_list, idx, element):
 
     Return: return a list
     """
-    if idx >= 0 or idx <= len(my_list):
-        my_list[idx] = int(element)
-        return my_list
+    if idx >= 0 or idx < len(my_list):
+        my_list[idx] = element
     return my_list
