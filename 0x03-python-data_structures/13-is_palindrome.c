@@ -28,7 +28,7 @@ int is_palindrome(listint_t **head)
 	int *list = NULL;
 	int len = 0, count = 0;
 
-	if ((!(*head)) || !head)
+	if ((!(*head)) || !head || (*head)->next == NULL)
 		return (1);
 	while (temp)
 	{
