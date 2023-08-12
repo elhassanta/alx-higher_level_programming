@@ -5,5 +5,6 @@ def print_list_integer(my_list=[]):
     Args:
         my_list: list of integer
     """
-    for number in my_list:
-        print("{}".format(number))
+    if my_list != []:
+        for number in my_list:
+            print("{}".format(number))
