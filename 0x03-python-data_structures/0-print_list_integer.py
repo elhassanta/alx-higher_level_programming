@@ -7,4 +7,4 @@ if __name__ == "__main__"
             my_list: list of integer
         """
          for number in my_list:
-            print("{}".format(number))
+             print("{:d}".format(number))
