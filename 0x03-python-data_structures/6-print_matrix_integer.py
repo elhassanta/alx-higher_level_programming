@@ -6,7 +6,7 @@ def print_matrix_integer(matrix=[[]]):
 
     matrix: parameter list of list of integers
     """
-    for elements in matrix:
-        for element in range(0, len(elements)):
-            print("{:d}".format(elements[element]), end=" " if elements[element] != elements[-1] else "")
+    for lin in matrix:
+        for i in range(0, len(lin)):
+            print("{:d}".format(lin[i]), end=" " if lin[i] != lin[-1] else "")
         print()
