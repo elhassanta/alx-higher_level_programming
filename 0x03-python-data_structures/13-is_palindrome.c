@@ -4,21 +4,18 @@
  *@head: parmeter pointer point to the head
  *Return: return reversed linked list
  */
-void rev_list(listint_t **head)
+void rev_list(listint_t **head, listint_t *fnode)
 {
-	listint_t *prev = NULL;
-	listint_t *curr = *head;
-	listint_t *next = NULL;
-
-	while (curr != NULL)
+	listint_t *node = NULL;
+	if (fnode->next == NULL)
 	{
-		next = curr->next;
-		curr->next = prev;
-		prev = curr;
-		curr = next;
+		*head = fnode;
+		return;
 	}
-	*head = prev;
-
+	rev_list(head, fnode->next);
+	node = fnode->next;
+	node->next = fnode;
+	fnode->next = NULL;
 }
 /**
  *is_palindrome - check if a linked list is palindrome
@@ -48,7 +45,7 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 	}
 	count = 0;
-	rev_list(head);
+	rev_list(head, *head);
 	temp = *head;
 	while (count < len / 2)
 	{
