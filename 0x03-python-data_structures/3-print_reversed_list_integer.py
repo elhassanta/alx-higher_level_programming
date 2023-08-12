@@ -2,8 +2,6 @@
 # 3-print_reversed_list_integer.py
 def print_reversed_list_integer(my_list=[]):
     """My function print list at reverse ordre"""
-    if len(my_list) > 1
-        for index in range(len(my_list) - 1, -1, -1):
-            print("{:d}".format(my_list[index]))
-    elif len(my_list) == 1:
-        print("{:d}".format(mylist[0]))
+
+    for index in range(len(my_list), -1, -1):
+        print("{:d}".format(my_list[index]))
