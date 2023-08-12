@@ -6,5 +6,5 @@ if __name__ == "__main__"
         Args:
             my_list: list of integer
         """
-         for number in my_list:
-             print("{:d}".format(number))
+         for number in range(len(my_list)):
+             print("{:d}".format(my_list(number)))
