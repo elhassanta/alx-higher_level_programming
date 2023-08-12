@@ -8,8 +8,5 @@ def print_matrix_integer(matrix=[[]]):
     """
     for elements in matrix:
         for element in range(0, len(elements)):
-            if element < len(elements) - 1:
-                print("{:d}".format(elements[element]), end=" ")
-            else:
-                print("{:d}".format(elements[element]),"")
+            print("{:d}".format(elements[element]), end=" " if elements[element] != elements[-1] else "")
         print()
