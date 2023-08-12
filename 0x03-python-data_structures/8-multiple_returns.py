@@ -12,5 +12,5 @@ def multiple_returns(sentence):
     return tuple of two elements
     """
     if len(sentence) == 0:
-        return None
+        return (0,None)
     return (len(sentence), sentence[0].upper())
