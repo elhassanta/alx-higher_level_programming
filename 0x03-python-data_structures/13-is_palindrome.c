@@ -32,7 +32,7 @@ listint_t *head2 = NULL;
 int len = 0, count = 0;
 
 if ((!(*head)) || !head || (*head)->next == NULL)
-return (0);
+return (1);
 while (temp)
 {
 temp = temp->next;
@@ -51,7 +51,7 @@ head2 = temp;
 rev_list(&head2, temp);
 comp1 = *head;
 count = 0;
-while (count < len / 2 - 1)
+while (count < len / 2)
 {
 if (comp1->n != temp->n)
 {
