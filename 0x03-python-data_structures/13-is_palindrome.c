@@ -41,7 +41,7 @@ int is_palindrome(listint_t **head)
 	if (len == 1)
 		return (1);
 	temp = *head;
-	while (count <= len / 2)
+	while (count < len / 2)
 	{
 		temp = temp->next;
 		count++;
