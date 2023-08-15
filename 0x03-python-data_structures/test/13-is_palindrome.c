@@ -32,13 +32,13 @@ int is_palindrome(listint_t **head)
 
 	if ((!(*head)) || !head || (*head)->next == NULL)
 		return (1);
-	while (temp->next)
+	while (temp)
 	{
 		temp = temp->next;
 		len++;
 	}
 	temp = *head;
-	while (count <= len / 2)
+	while (count < len / 2 - 1)
 	{
 		temp = temp->next;
 		count++;
