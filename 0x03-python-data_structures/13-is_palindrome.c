@@ -27,41 +27,42 @@ fnode->next = NULL;
  */
 int is_palindrome(listint_t **head)
 {
-listint_t *temp = (*head), *comp1, *comp2;
-listint_t *head2 = NULL;
-int len = 0, count = 0;
+	listint_t *temp = (*head), *comp1;
+	listint_t *head2 = NULL;
+	int len = 0, count = 0;
 
-if ((!(*head)) || !head || (*head)->next == NULL)
-return (1);
-while (temp)
-{
-temp = temp->next;
-len++;
-}
-temp = *head;
-while (count < len / 2 - 1)
-{
-temp = temp->next;
-count++;
-}
-if ((len % 2) == 0 && temp->n != temp->next->n)
-return (0);
-temp = temp->next->next;
-head2 = temp;
-rev_list(&head2, temp);
-comp1 = *head;
-count = 0;
-while (count < len / 2)
-{
-if (comp1->n != temp->n)
-{
-rev_list(&head2, head2);
-return (0);
-}
-comp1 = comp1->next;
-temp = temp->next;
-count++;
-}
-rev_list(&head2, head2);
-return (1);
+		if ((!(*head)) || !head || (*head)->next == NULL)
+			return (1);
+	while (temp)
+	{
+		temp = temp->next;
+		len++;
+	}
+	temp = *head;
+	while (count < len / 2 - 1)
+	{
+		temp = temp->next;
+		count++;
+	}
+	if ((len % 2) == 0 && temp->n != temp->next->n)
+		return (0);
+	temp = temp->next->next;
+	head2 = temp;
+	rev_list(&head2, temp);
+	comp1 = *head;
+	temp = head2;
+	count = 0;
+	while (count < len / 2 - 1)
+	{
+		if (comp1->n != temp->n)
+		{
+			rev_list(&head2, head2);
+			return (0);
+		}
+		comp1 = comp1->next;
+		temp = temp->next;
+		count++;
+	}
+	rev_list(&head2, head2);
+	return (1);
 }
