@@ -43,7 +43,7 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 		count++;
 	}
-	if ((len % 2) == 0 && temp->n != tmep->next->n)
+	if ((len % 2) == 0 && temp->n != temp->next->n)
 		return (0);
 	temp = temp->next->next;
 	head2 = &temp;
