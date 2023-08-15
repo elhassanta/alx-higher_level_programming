@@ -48,6 +48,8 @@ int is_palindrome(listint_t **head)
 	}
 	if ((len % 2) == 0 && temp->n != temp->next->n)
 		return (0);
+	if (len == 2)
+		return (1);
 	temp = temp->next->next;
 	head2 = temp;
 	rev_list(&head2, temp);
