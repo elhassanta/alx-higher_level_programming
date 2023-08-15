@@ -2,11 +2,13 @@
 /**
  *rev_list - this function reverse a linked list
  *@head: parmeter pointer point to the head
+ *@fnode: parameter to first node
  *Return: return reversed linked list
  */
 void rev_list(listint_t **head, listint_t *fnode)
 {
 	listint_t *node = NULL;
+
 	if (fnode->next == NULL)
 	{
 		*head = fnode;
@@ -24,39 +26,39 @@ void rev_list(listint_t **head, listint_t *fnode)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp = (*head);
-	int *list = NULL;
+	listint_t *temp = (*head), *comp1, *comp2;
+	listint_t **head2 = NULL;
 	int len = 0, count = 0;
 
 	if ((!(*head)) || !head || (*head)->next == NULL)
 		return (1);
-	while (temp)
+	while (temp->next)
 	{
 		temp = temp->next;
 		len++;
 	}
-	list = malloc((len / 2) * sizeof(int));
-	if (list == NULL)
-		return (0);
 	temp = *head;
-	while (count < len / 2)
+	while (count <= len / 2)
 	{
-		list[count++] = temp->n;
-		temp = temp->next;
-	}
-	count = 0;
-	rev_list(head, *head);
-	temp = *head;
-	while (count < len / 2)
-	{
-		if (list[count] != temp->n)
-		{
-			free(list);
-			return (0);
-		}
 		temp = temp->next;
 		count++;
 	}
-	free(list);
+	head2 = &temp;
+	rev_list(head2, temp);
+	comp1 = *head;
+	comp2 = *head2;
+	count = 0;
+	while (count <= len / 2)
+	{
+		if (comp1->n != comp2->n)
+		{
+			rev_list(head2, *head2);
+			return (0);
+		}
+		comp1 = comp1->next;
+		comp2 = comp2->next;
+		count++;
+	}
+	rev_list(head2, *head2);
 	return (1);
 }
