@@ -43,12 +43,15 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 		count++;
 	}
+	if ((len % 2) == 0 && temp->n != tmep->next->n)
+		return (0);
+	temp = temp->next->next;
 	head2 = &temp;
 	rev_list(head2, temp);
 	comp1 = *head;
 	comp2 = *head2;
 	count = 0;
-	while (count < len / 2)
+	while (count < len / 2 - 1)
 	{
 		if (comp1->n != comp2->n)
 		{
