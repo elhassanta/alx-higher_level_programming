@@ -63,5 +63,10 @@ temp = temp->next;
 count++;
 }
 rev_list(&head2, head2);
+while (head2)
+{
+	head2 = head2->next;
+	printf("%d*\n", head2->n);
+}
 return (1);
 }
