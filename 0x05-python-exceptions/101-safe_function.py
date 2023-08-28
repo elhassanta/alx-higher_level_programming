@@ -8,15 +8,6 @@ def safe_function(fct, *args):
     try:
         result = fct(arg1, arg2)
         return result
-    except IndexError as err:
-        tot_error = "Exception: " + str(err) + "\n"
-        write(tot_error)
-        return None
-    except TypeError as err:
-        tot_error = "Exception: " + str(err) + "\n"
-        write(tot_error)
-        return None
-    except ZeroDivisionError as err:
-        tot_error = "Exception: " + str(err) + "\n"
-        write(tot_error)
+    except:
+        print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
         return None
