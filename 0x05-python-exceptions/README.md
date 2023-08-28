@@ -1,0 +1,7 @@
+0x05. Python - Exceptions
+Python
+ By: Guillaume
+ Weight: 1
+ Project will start Aug 28, 2023 4:00 AM, must end by Aug 29, 2023 4:00 AM
+ Checker will be released at Aug 28, 2023 10:00 AM
+ An auto review will be launched at the deadline
