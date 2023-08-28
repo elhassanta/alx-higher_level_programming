@@ -11,6 +11,6 @@ def safe_print_integer_err(value):
         sys.stderr.write(tot_error)
         return False
     except TypeError as err:
-        tot_error = "Exception: " + err + "\n"
+        tot_error = "Exception: " + str(err) + "\n"
         sys.stderr.write(tot_error)
         return False
