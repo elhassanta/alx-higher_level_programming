@@ -14,13 +14,13 @@ class Square:
 
     def my_print(self):
         if self.position[1] > 0:
-            print("")
+            print()
         for i in range(self.size):
             for k in range(self.position[0]):
                 print("_", end="")
             for j in range(self.size):
                 print("#", end="")
-            if i < self.size - 1:
+            if i != self.size - 1:
                 print("")
         print("")
 
