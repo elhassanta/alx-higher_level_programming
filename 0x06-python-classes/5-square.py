@@ -4,7 +4,7 @@
 
 class Square:
     """this is the begining of the square class"""
-    def __init__(self, size=0, position={0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """this the constroctor"""
         self.size = size
         self.position = position
@@ -14,7 +14,7 @@ class Square:
 
     def my_print(self):
         for i in range(self.size):
-            for j in range(self.szie):
+            for j in range(self.size):
                 print("#", end="")
             if i < self.size - 1:
                 print("")
