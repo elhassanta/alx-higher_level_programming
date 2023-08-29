@@ -19,6 +19,7 @@ class Square:
             if i < self.size - 1:
                 print("")
         print("")
+
     def area(self):
         """this methode will calculate the area of a square"""
         if not isinstance(self.size, int):
