@@ -16,6 +16,8 @@ class Square:
         if self.position[1] > 0:
             print("")
         for i in range(self.size):
+            for k in range(self.position[0]):
+                print("_", end="")
             for j in range(self.size):
                 print("#", end="")
             if i < self.size - 1:
@@ -40,3 +42,18 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.size = value
+
+my_square_1 = Square(3)
+my_square_1.my_print()
+
+print("--")
+
+my_square_2 = Square(3, (1, 1))
+my_square_2.my_print()
+
+print("--")
+
+my_square_3 = Square(3, (3, 0))
+my_square_3.my_print()
+
+print("--")
