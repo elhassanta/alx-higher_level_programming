@@ -10,6 +10,7 @@ class Square:
 
     def get_size(self):
         return (self.size)
+
     def area(self):
         """this methode will calculate the area of a square"""
         if not isinstance(self.size, int):
