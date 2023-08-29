@@ -1,52 +1,90 @@
 #!/usr/bin/python3
-"""defining a class"""
+"""
+This class is used to Create object of type Square
+"""
 
 
 class Square:
-    """this is the begining of the square class"""
+    """
+    This class is used to define a square object
+    """
     def __init__(self, size=0, position=(0, 0)):
-        """this the constroctor"""
-        self.size = size
-        self.position = position
-
-    def get_size(self):
-        return (self.size)
-
-    def my_print(self):
-        if self.position[1] > 0:
-            print()
-        for i in range(self.size):
-            for k in range(self.position[0]):
-                print("_", end="")
-            for j in range(self.size):
-                print("#", end="")
-            if i != self.size - 1:
-                print("")
-        print("")
+        """
+        This mothod initialize an object of the class square
+        """
+        errstr = "position must be a tuple of 2 positive integers"
+        if isinstance(size, int):
+            if size >= 0:
+                self.__size = size
+            else:
+                raise ValueError("size mst be >= 0")
+        else:
+            raise TypeError("size must be an integer")
+        if isinstance(position, tuple) and len(position) == 2:
+            if isinstance(position[0], int) and isinstance(position[1], int):
+                self.__position = tuple(position)
+            else:
+                raise TypeError(errstr)
+        else:
+            raise TypeError(errstr)
 
     def area(self):
-        """this methode will calculate the area of a square"""
-        if not isinstance(self.size, int):
-            raise TypeError("size must be an integer")
-        if self.size < 0:
-            raise ValueError("size must be >= 0")
-        area = (self.size * self.size)
-        return area
+        """
+        calculate the area of a square
+        """
+        return self.__size ** 2
 
-    def get_size(self):
-        return (self.size)
+    @property
+    def size(self):
+        """
+        get the value of the private attribute
+        """
+        return self.__size
 
-    def set_size(self, value=0):
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.size = value
+    @size.setter
+    def size(self, value):
+        """
+        size is function sets a value in the attribute size
+        """
+        if isinstance(value, int):
+            if value >= 0:
+                self.__size = value
+            else:
+                raise ValueError("size must be >= 0")
+        else:
+            raise TypeError("size must be integer")
 
+    def my_print(self):
+        """
+        print a square in the stdout with #
+        """
+        if self.position[1] != 0 and self.__size != 0:
+            print("\n" * self.position[1], end='')
+        for i in range(self.__size):
+            if self.__position[0] != 0:
+                print(" " * self.__position[0], "#" * self.__size, sep='')
+            else:
+                print("#" * self.__size)
+        if (self.__size == 0):
+            print()
+
+    @property
+    def position(self):
+        """
+        return the value of the attribute position
+        """
+        return self.__position
+
+    @position.setter
     def position(self, value):
-        if (not isinstance(value, tuple) or
-                len(value) != 2 or
-                not all(isinstance(num, int) for num in value) or
-                not all(num >= 0 for num in value)):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
+        """
+        Write a class Square that defines a square by
+        """
+        errstr = "position must be a tuple of 2 positive integers"
+        if isinstance(value, tuple) and len(value) == 2:
+            if isinstance(value[0], int) and isinstance(value[1], int):
+                self.__position = tuple(value)
+            else:
+                raise TypeError(errstr)
+        else:
+            raise TypeError(errstr)
