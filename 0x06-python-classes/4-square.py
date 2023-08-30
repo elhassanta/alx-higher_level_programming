@@ -6,6 +6,10 @@ class Square:
     """this is the begining of the square class"""
     def __init__(self, value=0):
         """this the constroctor"""
+        if not isinstance(self.size, int):
+            raise TypeError("size must be an integer")
+        if self.size < 0:
+            raise ValueError("size must be >= 0")
         self.size = value
 
     def get_size(self):
