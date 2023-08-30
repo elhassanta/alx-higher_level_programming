@@ -24,4 +24,4 @@ class MagicClass:
 
     def circumference(self):
         """this method calculate the perimeter of disk"""
-        return (2 * (math.pi) * __radius)
+        return (2 * (math.pi) * self.__radius)
