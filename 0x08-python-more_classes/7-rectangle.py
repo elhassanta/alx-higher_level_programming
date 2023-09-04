@@ -5,7 +5,7 @@
 class Rectangle:
     """this is a tamplate to create rectangle object"""
     number_of_instances = 0
-    print_symbol = "$"
+    print_symbol = "#"
 
     def __init__(self,  width=0, height=0):
         """this is the constroctor method"""
