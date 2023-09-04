@@ -37,13 +37,19 @@ class Rectangle:
         if width < 0:
             raise ValueError("width must be >= 0")
         self.__width = width
-    def area(self):
+    def perimeter(self):
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2
+    def area(self):
+        return (self.__width * self.__height)
+
 my_rectangle = Rectangle(2, 4)
-print(my_rectangle.__dict__)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
+print("--")
 
 my_rectangle.width = 10
 my_rectangle.height = 3
-print(my_rectangle.__dict__)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
