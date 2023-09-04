@@ -59,3 +59,8 @@ class Rectangle:
             if i < self.__height - 1:
                 str = str + "\n"
         return str
+
+    def __repr__(self):
+        """ this method allow us to create a copy of an instance"""
+        return f"Rectangle({repr(self.__width, self.__height)})"
+
