@@ -71,20 +71,13 @@ class Rectangle:
         """this is going pop out in deletion"""
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
-    def __eq__(self, other):
-        """Equality comparison."""
-        if isinstance(other, Square):
-            return self.__size == other.__size
-        return False
 
-    def __lt__(self, other):
-        """Less than comparison."""
-        if isinstance(other, Square):
-            return self.__size < other.__size
-        return False
-
-    def __ge__(self, other):
-        """Greater than or equal to comparison."""
-        if isinstance(other, Square):
-            return self.__size >= other.__size
-        return False
+    def bigger_or_equal(rectang1, rectang2):
+        """this method compare two rectangles"""
+        if not isinstance(rectang1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rectang2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rectang1.area() > rectang2.area():
+            return rectang1
+        return rectang2
