@@ -3,4 +3,5 @@
 
 
 class Rectangle:
+    """this is tamplate of a rectangle"""
     pass
