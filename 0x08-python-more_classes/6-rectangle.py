@@ -4,16 +4,13 @@
 
 class Rectangle:
     """this is a tamplate to create rectangle object"""
+    number_of_instances = 0
 
-    __number_of_instances = 0
     def __init__(self,  width=0, height=0):
         """this is the constroctor method"""
         self.width = width
         self.height = height
-        Rectangle.__number_of_instances = Rectangle__number_of_instances + 1
-
-    def number_of_instances(self):
-        return (self.__number_of_instance)
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -71,5 +68,5 @@ class Rectangle:
 
     def __del__(self):
         """this is going pop out in deletion"""
-        Rectangle.__number_of_instances = Rectangle__number_of_instances - 1
+        Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
