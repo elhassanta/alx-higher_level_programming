@@ -63,5 +63,7 @@ class Rectangle:
     def __repr__(self):
         """ this method allow us to create a copy of an instance"""
         return f"Rectangle({self.__width}, {self.__height})"
+
     def __del__(self):
+        """this is going pop out in deletion"""
         print("Bye rectangle...")
