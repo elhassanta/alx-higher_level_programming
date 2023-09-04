@@ -47,7 +47,9 @@ class Rectangle:
     def area(self):
         """this method calculate the area of rectangle"""
         return (self.__width * self.__height)
+
     def __str__(self):
+        """this is the string method"""
         str = ""
         for i in range(0, self.__height):
             for j in range(0, self.__width):
@@ -55,8 +57,3 @@ class Rectangle:
             if i < self.__height - 1:
                 str = str + "\n"
         return str
-my_rectangle = Rectangle(2, 4)
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
-
-print(str(my_rectangle))
-print(repr(my_rectangle))
