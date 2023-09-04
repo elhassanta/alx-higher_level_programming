@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""this is the discription model"""
+
+
 class Rectangle:
     """this is a tamplate to create rectangle object"""
 
