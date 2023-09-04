@@ -37,6 +37,10 @@ class Rectangle:
         if width < 0:
             raise ValueError("width must be >= 0")
         self.__width = width
+    def area(self):
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (self.__width + self.__height) * 2
 my_rectangle = Rectangle(2, 4)
 print(my_rectangle.__dict__)
 
