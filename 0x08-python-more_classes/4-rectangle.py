@@ -62,4 +62,4 @@ class Rectangle:
 
     def __repr__(self):
         """ this method allow us to create a copy of an instance"""
-        return f"Rectangle({repr(self.__width, self.__height)})"
+        return f"Rectangle({self.__width}, {self.__height})"
