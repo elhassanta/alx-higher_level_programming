@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this is my model"""
 
+
 def add_integer(a, b=98):
     """this is my function"""
     if not isinstance(a, int) and not isinstance(a, float):

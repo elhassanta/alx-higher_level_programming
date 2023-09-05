@@ -31,7 +31,8 @@ def matrix_divided(matrix, div):
         divided_matrix.append(line)
     return divided_matrix
 
+
 if __name__ == "__main__":
-    #import doctest
-    #doctest.testfile("./tests/2-matrix_divided.txt")
-    print(matrix_divided([[1, 3], [2]], 1)) 
+    """import doctest
+    doctest.testfile("./tests/2-matrix_divided.txt")"""
+    print(matrix_divided([[1, 3], [2]], 1))
