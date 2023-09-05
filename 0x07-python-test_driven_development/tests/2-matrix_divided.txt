@@ -1,6 +1,6 @@
 # 2-matrix_divided.txt
 ==============================
-How to Use 2-matrix_divided.py
+How to Use 2-matrix_divided.py model
 ==============================
 This module defines a matrix division function ``matrix_divided(matrix, div)``.
 Usage
