@@ -1,11 +1,11 @@
 ===========================
-How to Use 0-add_integer.py
+How to use function 0-add_integer.py
 ===========================
 This module defines an integer addition function ``add_integer(a, b=98)``.
 Usage
 =====
-``add_integer(...)``` returns the addition of its two arguments. For numbers,
-that value is equivalent to using the ``+`` operator.
+```add_integer(...)``` function returns the addition of two arguments.
+For numbers, that value is equivalent to using the ``+`` operator.
 ::
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(2, 3)
@@ -13,7 +13,7 @@ that value is equivalent to using the ``+`` operator.
 ::
 >>> add_integer(2, -3)
 -1
-The function also works with floating-point values.
+The function adding two float values.
 ::
 >>> add_integer(2.0, 3.0)
 5
