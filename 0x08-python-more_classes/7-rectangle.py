@@ -71,6 +71,7 @@ class Rectangle:
         """this is going pop out in deletion"""
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
+
     def __eq__(self, other):
         """Equality comparison."""
         if isinstance(other, Square):
