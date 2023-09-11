@@ -18,4 +18,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """this is a function cosume the string descreptor"""
-        return "[Square] {}/{}".format(self.size, self.size)
+        return "[Square] {}/{}".format(self.__size, self.__size)
