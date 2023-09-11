@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+"""this is the right place to describe my model"""
 Rectangle = __import__('9-rectangle').Rectangle
-"""imported my model to use"""
 
 
 class Square(Rectangle):
