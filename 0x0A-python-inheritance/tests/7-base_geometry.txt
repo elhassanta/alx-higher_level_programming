@@ -16,13 +16,19 @@ Create instance of our class:
 
 checking with this value to raise a type error:
 	>>> bg.integer_validator("name", "John")
+	Traceback (most recent call last):
+	...
 	[TypeError] name must be an integer
 
 checking with this value to raise a value error:
 	>>> bg.integer_validator("age", 0)
+	Traceback (most recent call last):
+	...
 	[ValueError] age must be greater than 0
 
 checking with this value to raise a value error:
 	>>> bg.integer_validator("distance", -4)
+	Traceback (most recent call last):
+	...
 	[ValueError] distance must be greater than 0
 	
