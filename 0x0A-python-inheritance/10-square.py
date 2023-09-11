@@ -9,7 +9,13 @@ class Square(Rectangle):
         """this is the constcture for a sauqre"""
         self.integer_validator("size", size)
         self.__size = size
+        super.__init__(self, size, size)
 
     def area(self):
         """this method count area of a square"""
         return (self.__size ** 2)
+s = Square(13)
+
+print(s)
+print(s.area())
+
