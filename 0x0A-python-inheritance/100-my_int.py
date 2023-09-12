@@ -8,8 +8,13 @@ class MyInt(int):
     """
     class MyInt inherit from the int class
     """
-    def __int__(self, value=0):
-        self.value = value
+    def __eq__(self, value):
+        """overide int __eq__"""
+        return self.real == value
+
+    def __ne__(self, value):
+        """overide __ne__ method"""
+        return self.real != value
 
 
 if __name__ == "__main__":
