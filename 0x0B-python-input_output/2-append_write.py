@@ -7,3 +7,4 @@ def append_write(filename="", text=""):
     if type(filename).__name__ == str.__name__:
         with open(filename, mode="a", encoding="utf-8") as file1:
             file1.write(text)
+            file1.close()

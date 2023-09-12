@@ -8,3 +8,4 @@ def write_file(filename="", text=""):
     if filename != "" or not isinstance(filename, str):
         with open(filename, mode="w", encoding="utf-8") as file1:
             file1.write(text)
+            file1.close()
