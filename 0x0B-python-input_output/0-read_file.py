@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """this is a comment for my model"""
-
+import os
 
 def read_file(filename=""):
     """this my function which open a file"""
