@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """this is a comment for my models"""
-import json
 
 
 def class_to_json(obj):
