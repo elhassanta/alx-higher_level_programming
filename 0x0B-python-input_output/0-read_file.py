@@ -7,4 +7,4 @@ def read_file(filename=""):
     if filename == "":
         with open(filename, mode="r", encoding="utf-8") as myFile:
             str1 = myFile.read()
-            myFile.close()
+            print(str1)
