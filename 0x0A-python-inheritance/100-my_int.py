@@ -1,12 +1,19 @@
 #!/usr/bin/python3
-"""this is right place of my comment for model"""
+"""
+That class inherits from the int class
+"""
 
 
 class MyInt(int):
-    """this my in custome class"""
-
-    def __init__(self, value):
-        """this is my constructor"""
-        if type(value).__name__ != int.__name__:
-            raise TypeError("value must be integer")
+    """
+    class MyInt inherit from the int class
+    """
+    def __int__(self, value=0):
         self.value = value
+
+
+if __name__ == "__main__":
+    my_i = MyInt(3)
+    print(my_i)
+    print(my_i == 3)
+    print(my_i != 3)
