@@ -16,6 +16,8 @@ class Student:
         dict_attributes = self.__dict__
         dic = {}
         for k, v in dict_attributes.items():
-            if isinstance(v, (int, list, dict, bool, str)):
+            if isinstance(v, list(str)):
+                dic[k] = v[0]
+            else if isinstance(v, (int, list, dict, bool, str)):
                 dic[k] = v
         return dic
