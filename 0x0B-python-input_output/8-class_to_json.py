@@ -9,6 +9,6 @@ def class_to_json(obj):
     dict_attributes = obj.__dict__
     dic = {}
     for k, v in dict_attributes:
-        if isinstance(v,(int, list, dict, bool, str)):
+        if isinstance(v, (int, list, dict, bool, str)):
             dic[k] = v
     return dic
