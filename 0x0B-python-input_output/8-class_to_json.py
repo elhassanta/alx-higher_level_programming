@@ -8,7 +8,7 @@ def class_to_json(obj):
     for JSON serialization of an object"""
     dict_attributes = obj.__dict__
     dic = {}
-    for k, v in dict_attributes.itemes():
+    for k, v in dict_attributes.items():
         if isinstance(v, (int, list, dict, bool, str)):
             dic[k] = v
     return dic
