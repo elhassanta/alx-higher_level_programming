@@ -9,6 +9,6 @@ try:
     a = load_from_json_file("add_item.json")
 except Exception as err:
     a = []
-arguments = sys.argv[1:] + a
+arguments = a + sys.argv[1:]
 save_to_json_file(arguments, "add_item.json")
 load_from_json_file("add_item.json")
