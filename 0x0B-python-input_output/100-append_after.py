@@ -13,4 +13,3 @@ def append_after(filename="", search_string="", new_string=""):
                 new_file = new_file + new_string
     with open(filename, "w") as file1:
         file1.write(new_file)
-
