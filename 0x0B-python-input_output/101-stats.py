@@ -15,7 +15,7 @@ def print_status(size, status):
 if __name__ == "__main__":
     import sys
 
-    count = 0
+    count = 1
     size = 0
     status_codes = dict()
     valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
