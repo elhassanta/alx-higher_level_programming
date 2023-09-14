@@ -26,7 +26,6 @@ class Student:
         return dic
 
     def reload_from_json(self, json):
-        dic = self.to_json()
+        """Replace all attributes of the Student"""
         for k, v in json.items():
-            if k in dic.keys():
-                dic[k] = v
+            setattr(self, k, v)
