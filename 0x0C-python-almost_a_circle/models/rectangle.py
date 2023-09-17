@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this is the discription model"""
 from base import Base
+import json
 
 
 class Rectangle(Base):
@@ -100,13 +101,15 @@ class Rectangle(Base):
         """this is the str method"""
         x = self.x
         y = self.y
-        width = self.width
-        height = self.height
-        return "({}) {}/{} - {}/{}".format(self.id, x, y, width, height)
+        w = self.width
+        h = self.height
+        id = self.id
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h)
 
     def __repr__(self):
         """ this method allow us to create a copy of an instance"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self.width}, {self.height}, {self.x}, {self.y},\
+    {self.id})"
 
     def update(self, *args, **kwargs):
         """this function will update instance of rectangle"""
@@ -131,7 +134,6 @@ class Rectangle(Base):
         elif len(args) == 1:
             self.id = args[0]
         else:
-            print("enter")
             pass
         for k, v in kwargs.items():
             if k == "x":
@@ -147,6 +149,15 @@ class Rectangle(Base):
             else:
                 pass
 
+    def to_dictionary(self):
+        """this method will convert object to a dictionary"""
+        x = self.x
+        y = self.y
+        width = self.width
+        height = self.height
+        id = self.id
+        return {"x": x, "y": y, "id": id, "height": height, "width": width}
+
     def bigger_or_equal(rectang1, rectang2):
         """this method compare two rectangles"""
         if not isinstance(rectang1, Rectangle):
@@ -160,17 +171,14 @@ class Rectangle(Base):
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(10, 10, 10, 10)
+    r1 = Rectangle(10, 2, 1, 9)
     print(r1)
+    r1_dictionary = r1.to_dictionary()
+    print(r1_dictionary)
+    print(type(r1_dictionary))
 
-    r1.update(height=1)
-    print(r1)
-
-    r1.update(width=1, x=2)
-    print(r1)
-
-    r1.update(y=1, width=2, x=3, id=89)
-    print(r1)
-
-    r1.update(x=1, height=2, y=3, width=4)
-    print(r1)
+    r2 = Rectangle(1, 1)
+    print(r2)
+    r2.update(**r1_dictionary)
+    print(r2)
+    print(r1 == r2)
