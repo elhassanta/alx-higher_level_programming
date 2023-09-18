@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """this is the discription model"""
 from base import Base
-import json
 
 
 class Rectangle(Base):
@@ -167,18 +166,12 @@ class Rectangle(Base):
         if rectang1.area() >= rectang2.area():
             return rectang1
         return rectang2
-
-
 if __name__ == "__main__":
 
-    r1 = Rectangle(10, 2, 1, 9)
-    print(r1)
+    r1 = Rectangle(3, 5, 1)
     r1_dictionary = r1.to_dictionary()
-    print(r1_dictionary)
-    print(type(r1_dictionary))
-
-    r2 = Rectangle(1, 1)
+    r2 = Rectangle.create(**r1_dictionary)
+    print(r1)
     print(r2)
-    r2.update(**r1_dictionary)
-    print(r2)
+    print(r1 is r2)
     print(r1 == r2)
