@@ -165,13 +165,4 @@ class Rectangle(Base):
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rectang1.area() >= rectang2.area():
             return rectang1
-        return rectang2
-if __name__ == "__main__":
-
-    r1 = Rectangle(3, 5, 1)
-    r1_dictionary = r1.to_dictionary()
-    r2 = Rectangle.create(**r1_dictionary)
-    print(r1)
-    print(r2)
-    print(r1 is r2)
-    print(r1 == r2)
+        return rectang2 
