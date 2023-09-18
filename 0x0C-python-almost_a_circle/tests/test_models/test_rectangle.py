@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Defines unittests for models/rectangle.py.
 """
+import sys
+sys.path.append("/root/alx-higher_level_programming/0x0C-python-almost_a_circle/models")
 import io
 import sys
 import unittest
