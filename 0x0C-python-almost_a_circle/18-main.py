@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """ 18-main """
-from rectangle import Rectangle
-from square import Square
+import sys
+sys.path.append("/root/alx-higher_level_programming/0x0C-python-almost_a_circle/models")
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 if __name__ == "__main__":
 
