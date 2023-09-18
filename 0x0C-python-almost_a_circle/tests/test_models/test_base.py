@@ -10,7 +10,7 @@ from models.square import Square
 class TestBase_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Base class."""
 
-    def test_no_arg(self):
+    def test_zero_arg(self):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
@@ -21,12 +21,12 @@ class TestBase_instantiation(unittest.TestCase):
         b3 = Base()
         self.assertEqual(b1.id, b3.id - 2)
 
-    def test_None_id(self):
+    def test_value_id_None(self):
         b1 = Base(None)
         b2 = Base(None)
         self.assertEqual(b1.id, b2.id - 1)
 
-    def test_unique_id(self):
+    def test_unique_id_value(self):
         self.assertEqual(12, Base(12).id)
 
     def test_nb_instances_after_unique_id(self):
