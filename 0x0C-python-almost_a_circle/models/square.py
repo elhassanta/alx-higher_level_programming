@@ -1,64 +1,84 @@
 #!/usr/bin/python3
-"""our import models"""
-from rectangle import Rectangle
+"""Defines a square class."""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """this is my class square"""
-    def __init__(self, size, x=0, y=0, id=None):
-        """this is constructor square method"""
-        super().__init__(size, size, x, y, id)
+    """Represent a square."""
 
-    def __str__(self):
-        """this is str inter method to a class"""
-        x = self.x
-        y = self.y
-        width = self.width
-        id = self.id
-        return "[Square] ({}) {}/{} - {}".format(id, x, y, width)
+    def __init__(self, size, x=0, y=0, id=None):
+        """Initialize a new Square.
+
+        Args:
+            size (int): The size of the new Square.
+            x (int): The x coordinate of the new Square.
+            y (int): The y coordinate of the new Square.
+            id (int): The identity of the new Square.
+        """
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """this is the size getter method"""
+        """Get/set the size of the Square."""
         return self.width
 
     @size.setter
-    def size(self, size):
-        """this is the setter size method"""
-        self.width = self.height = size
+    def size(self, value):
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
-        """this method will update square instances"""
-        for i in range(len(args)):
-            if i == 0:
-                self.id = args[0]
-            elif i == 1:
-                self.size = args[1]
-            elif i == 2:
-                self.x = args[2]
-            elif i == 3:
-                self.y = args[3]
-            else:
-                break
-        if len(args) > 0:
-            pass
-        else:
+        """Update the Square.
+
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents size attribute
+                - 3rd argument represents x attribute
+                - 4th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
+        if args and len(args) != 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.size = arg
+                elif a == 2:
+                    self.x = arg
+                elif a == 3:
+                    self.y = arg
+                a += 1
+
+        elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
-                    self.id = v
+                    if v is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = v
                 elif k == "size":
                     self.size = v
                 elif k == "x":
                     self.x = v
                 elif k == "y":
                     self.y = v
-                else:
-                    pass
 
     def to_dictionary(self):
-        """this method convert square in dictionary"""
-        x = self.x
-        y = self.y
-        size = self.size
-        id = self.id
-        return {"id": id, "x": x, "size": size, "y": y}
+        """Return the dictionary representation of the Square."""
+        return {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+        }
+
+    def __str__(self):
+        """Return the print() and str() representation of a Square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
+
