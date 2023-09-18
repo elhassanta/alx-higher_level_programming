@@ -72,7 +72,6 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
 
-
         """Return a class instantied from a dictionary of attributes.
 
         Args:
