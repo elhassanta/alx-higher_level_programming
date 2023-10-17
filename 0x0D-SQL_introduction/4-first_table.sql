@@ -1,2 +1,5 @@
--- script that remove a database
- DROP DATABASE IF EXISTS hbtn_0c_0;
+-- script that create a table in a database
+ CREATE TABLE first_table (
+	id INT,
+	name VARCHAR(256)
+);
