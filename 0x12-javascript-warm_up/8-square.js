@@ -6,7 +6,7 @@ if (process.argv[2] === undefined || isNaN(process.argv[2])) {
 	let i = 0;
 	let str = '';
 	while (i < x) {
-		str = str + 'x';
+		str = str + 'X';
 		i++;
 	}
 	i = 0;
