@@ -29,30 +29,41 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *temp = (*head), *comp1;
 	listint_t *head2 = NULL;
-	int len = 0, count = 0;
+	int len = 0, count = 1;
 
-		if ((!(*head)) || !head || (*head)->next == NULL)
+		if (((*head) == NULL) || head == NULL)
 			return (1);
 	while (temp)
 	{
 		temp = temp->next;
 		len++;
 	}
+	if (len == 1)
+		return (1);
 	temp = *head;
-	while (count < len / 2 - 1)
+	while (count < len / 2)
 	{
 		temp = temp->next;
 		count++;
 	}
 	if ((len % 2) == 0 && temp->n != temp->next->n)
 		return (0);
+	if (len == 2)
+		return (1);
+	else if (len == 3)
+	{
+		if ((*head)->n == (*head)->next->next->n)
+			return (1);
+		else
+			return(0);
+	}
 	temp = temp->next->next;
 	head2 = temp;
 	rev_list(&head2, temp);
 	comp1 = *head;
 	temp = head2;
-	count = 0;
-	while (count < len / 2 - 2)
+	count = 1;
+	while (count < len / 2)
 	{
 		if (comp1->n != temp->n)
 		{

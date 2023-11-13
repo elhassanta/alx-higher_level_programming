@@ -1,0 +1,3 @@
+Some random text
+because write doesn't add new line
+last line of file
