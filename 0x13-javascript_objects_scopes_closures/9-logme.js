@@ -1,13 +1,9 @@
 #!/usr/bin/node
 
-let count = 0;
-exports.logMe = function (arg) {
-  let outer = function (arg) {
-    let inner = function () {
-      count++;
-    }
-    console.log(`${count}: ${arg}`);
-    inner();
+exports.logMe = function (item) {
+  if (typeof this.count === 'undefined') {
+    this.count = 0;
   }
-  outer(arg);
+  console.log(this.count + ': ' + item);
+  this.count++;
 };
