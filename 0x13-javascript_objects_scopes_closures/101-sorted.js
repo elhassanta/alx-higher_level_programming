@@ -8,3 +8,4 @@ Object.entries(myDic).map(e => {
     newDic[e[1]] = [e[0]];
   }
 });
+console.log(newDic);
