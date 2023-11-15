@@ -1,6 +1,5 @@
 #!/usr/bin/node
 let myDic = require('./101-data');
-console.log(myDic);
 let newDic = {};
 Object.entries(myDic).map(e => {
   if (newDic[e[1]]){
