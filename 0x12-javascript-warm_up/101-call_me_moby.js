@@ -2,7 +2,7 @@
 let callMeMoby = function (x, callback) {
   while (x > 0) {
     callback();
-    x++;
+    x--;
   };
 };
 module.exports = callMeMoby;
