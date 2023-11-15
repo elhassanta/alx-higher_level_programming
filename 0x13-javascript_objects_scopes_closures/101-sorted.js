@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let myDic = require('./101-data.js');
+let myDic = require('./101-data');
 console.log(myDic);
 let newDic = {};
 Object.entries(myDic).map(e => {
