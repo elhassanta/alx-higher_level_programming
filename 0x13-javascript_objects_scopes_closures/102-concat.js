@@ -1,3 +1,4 @@
+#!/usr/bin/node
 const readFileSync = require('fs').readFileSync;
 const writeFile = require('fs').writeFile;
 const argv = require('process').argv;
