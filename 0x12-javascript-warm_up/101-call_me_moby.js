@@ -5,4 +5,4 @@ let callMeMoby = function (x, callback) {
     x--;
   };
 };
-module.exports = callMeMoby;
+module.exports = {callMeMoby};
